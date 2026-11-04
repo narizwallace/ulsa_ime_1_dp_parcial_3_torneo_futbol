@@ -41,9 +41,9 @@ Para ejecutar en Windows:
 .\torneo.exe
 ```
 
-## 4. Registros
+## 4. Tipos de datos abstractos (TDA)
 
-Describan los registros (`struct`) que diseñaron: qué datos guarda cada uno y por qué.
+Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
 
 [Inserta aquí tu respuesta]
 

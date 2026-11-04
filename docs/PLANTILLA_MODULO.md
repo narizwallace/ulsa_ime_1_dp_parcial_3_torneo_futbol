@@ -33,7 +33,7 @@ Explica cada decisión y por qué la tomaste.
 
 [Inserta aquí tu respuesta]
 
-**¿Qué registros usa tu módulo y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
+**¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
 [Inserta aquí tu respuesta]
 

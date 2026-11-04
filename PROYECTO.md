@@ -39,7 +39,7 @@ Construir en equipo un programa que administra un torneo de fútbol de 6 equipos
 | 1 | Registro de equipos | Captura los equipos y muestra la lista | Registros, arreglos, validación de cadenas |
 | 2 | Simulación de partidos | Genera los 15 partidos, en modo aleatorio o de prueba, y muestra los resultados | Registros, ciclos anidados |
 | 3 | Tabla de posiciones | Calcula las estadísticas de cada equipo, sin imprimir un reporte | Funciones, paso por referencia |
-| 4 | Clasificación y campeón | Ordena y muestra la tabla, detecta empates y resuelve al campeón | Ordenamiento, intercambio de registros |
+| 4 | Clasificación y campeón | Ordena y muestra la tabla, detecta empates y resuelve al campeón | Ordenamiento, intercambio de registros, apuntadores |
 | 5 | Consultas | Busca un equipo y muestra su ficha | Manipulación de cadenas, apuntadores |
 | 6 | Matriz de enfrentamientos | Muestra la matriz, mejor ataque y mejor defensa | Matrices |
 
@@ -239,6 +239,20 @@ string marcador = to_string(golesLocal) + " - " + to_string(golesVisitante);
 cout << left << setw(10) << marcador;
 ```
 
+### 2.7 Estructuras de datos obligatorias
+
+Este proyecto evalúa el buen uso de las estructuras de datos. Cumplir la salida de los reportes no es suficiente: la solución debe usar las estructuras indicadas.
+
+| Estructura | Uso obligatorio | Dónde |
+| --- | --- | --- |
+| TDA | Modelar al menos `Equipo` y `Partido` como registros. En el README se identifican sus datos y sus operaciones. Por ejemplo, la operación "registrar resultado" de `Equipo`. | Bloque 0 |
+| Arreglos de registros | Guardar los equipos en un arreglo de `Equipo` y los partidos en un arreglo de `Partido`. | Bloque 0, módulos 1 y 2 |
+| Arreglo multidimensional | Guardar los goles en una matriz de `MAX_EQUIPOS` x `MAX_EQUIPOS`. El reporte se imprime recorriendo esa matriz. | Módulo 6 |
+| Apuntadores | La búsqueda devuelve un apuntador al `Equipo` encontrado, o `nullptr` si no existe. La ficha usa ese apuntador. | Módulo 5 |
+| Apuntadores | El intercambio de dos equipos se hace en una función que recibe dos apuntadores a `Equipo`. | Módulo 4 |
+
+Cada integrante debe poder explicar en la exposición por qué eligió cada estructura y cómo se usa en su módulo.
+
 ## 3. Módulos y responsables
 
 ### 3.1 Bloques
@@ -263,7 +277,7 @@ Tu módulo debe cumplir todo lo siguiente. Cómo lo cumples es decisión tuya, y
 7. Usa constantes con nombre, en lugar de escribir valores como 6 o 15.
 8. Reutiliza las funciones de `utilerias.h` y `torneo.h`, sin duplicar lógica.
 9. Maneja al menos un caso de rechazo, con un mensaje claro. El módulo 3 queda exento, porque no interactúa con el usuario.
-10. Demuestra los temas asignados en la sección 2.2.
+10. Demuestra los temas asignados en la sección 2.2 y usa las estructuras de datos obligatorias de la sección 2.7.
 11. Tiene su receta en pseudocódigo, escrita por ti antes de programar.
 
 ### 3.3 Bloques de equipo
@@ -391,6 +405,12 @@ Para ejecutar en Windows:
 | Propuesta de mejora | 10 | Cálculo a mano que coincide con la salida | 5 |
 | Exposición | 10 | | |
 
+Las estructuras de datos son parte central de la evaluación del código:
+
+- Un módulo que funcione, pero no use su estructura obligatoria de la sección 2.7, recibe máximo 25 de 30 puntos en código.
+- En equipos de 5, si el módulo 6 no usa su estructura obligatoria, el equipo recibe máximo 20 de 25 puntos en integración.
+- Si el equipo no modela sus datos con TDA, como pide la sección 2.7, se le restan 5 puntos de su evaluación de equipo.
+
 ## 10. Criterios de aceptación
 
 - [ ] El programa compila sin errores ni advertencias con el comando de la sección 5.
@@ -399,6 +419,7 @@ Para ejecutar en Windows:
 - [ ] La corrida aleatoria del README coincide con su cálculo a mano.
 - [ ] Cada módulo cumple los 11 puntos del contrato.
 - [ ] No hay variables globales.
+- [ ] La solución usa las estructuras de datos obligatorias de la sección 2.7.
 - [ ] Cada integrante tiene al menos 8 commits significativos.
 - [ ] Están la documentación, la receta, las pruebas, la reflexión y la propuesta de mejora de cada integrante.
 - [ ] En equipos de 5, está la documentación del módulo 6 en `docs/modulo_6/modulo.md`.
